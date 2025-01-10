@@ -1,0 +1,70 @@
+.men-hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/placeholder.svg?height=800&width=1200');
+    background-attachment: fixed;
+  }
+  
+  .product-list {
+    background-color: var(--background-color);
+    padding: 4rem 2rem;
+  }
+  
+  .product-list h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  .product-card {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .product-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .product-card:hover::before {
+    opacity: 1;
+  }
+  
+  .product-card h3,
+  .product-card p,
+  .product-card button {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .product-card:hover h3,
+  .product-card:hover p {
+    color: var(--background-color);
+  }
+  
+  .product-card button {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transform: translateY(100%);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .product-card:hover button {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  
+  .product-card button:hover {
+    background-color: var(--text-color);
+    color: var(--background-color);
+  }
+  
+  
