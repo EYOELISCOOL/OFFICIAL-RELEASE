@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AHA Leathers| Leather Goods</title>
+    <link rel="stylesheet" href="./styles_MEN INDEX.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;700&family=Poppins:wght@400;600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="./Images//Favicon.png">
+<body>
+    <header>
+        <div class="logo">
+            <img src="./Images/Logo.PNG" alt="AHA Leather Logo">
+        </div>
+  </div>
+        <nav>
+            <ul class="nav-links">
+                <nav>
+                    <ul class="nav-links">
+                        <li>
+                            <a href="./MEN.html">Men</a>
+                            <div class="dropdown-content">
+                                <div class="category">
+                                    <h3>Shoes</h3>
+                                    <a href="./Hiking Shoes MEN.html">Hiking Shoes</a>
+                                    <a href="./Wedding Shoes MEN.html">Wedding Shoes</a>
+                                    <a href="./Casual Shoes MEN.html">Casual Shoes</a>
+                                </div>
+                                <div class="category">
+                                    <h3>Belts</h3>
+                                    <a href="./Formal Belts MEN.html">Formal Belts</a>
+                                    <a href="./Casual Belts MEN.html">Casual Belts</a>
+                                </div>
+                                <div class="category">
+                                    <h3>Coats</h3>
+                                    <a href="./Winter Coats MEN.html">Winter Coats</a>
+                                    <a href="./Leather Jackets MEN.html">Leather Jackets</a>
+                                </div>
+                                <!-- Right Side: Image -->
+                <div class="dropdown-right">
+                    <img src="./Images/Men_CUSTOM.jpg" alt="Men's Collection">
+                </div>
+            </div>
+        </li>
+                            </div>
+                    
+                <li>
+                    <a href="./Women.html">Women</a>
+                    <div class="dropdown-content">
+                        <div class="category">
+                            <h3>Handbags</h3>
+                            <a href="./Totes WOMEN.html">Totes</a>
+                            <a href="./Clutches WOMEN.html">Clutches</a>
+                        </div>
+                        <div class="category">
+                            <h3>Jackets</h3>
+                            <a href="./Half-Jack WOMEN.html">Half-sized Jackets</a>
+                            <a href="./Full-Jack WOMEN.html">Full Winter Jackets</a>
+                            <img src="./Images/Men Wallet.PNG" alt=".">
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="./Pets.html">Pets</a>
+                    <div class="dropdown-content">
+                        <div class="category">
+                            <h3>Collars</h3>
+                            <a href="./Leather Collars PETS.html">Leather Collars</a>
+                            <a href="./Custom Collars.html">Custom Collars</a>
+                        </div>
+                        <div class="category">
+                            <h3>Leashes</h3>
+                            <a href="./Rope Leashes PETS.html">Rope Leashes</a>
+                            <a href="./Chain Leashes PETS.html">Chain Leashes</a>
+                        </div>
+                    </div>
+                </li>
+                <li> <a href="./Travel.html">Travel</a>
+                    <div class="dropdown-content">
+                        <div class="category">
+                            <h3>Shoes</h3>
+                            <a href="Hiking Shoes TRAVEL.html">Hiking Shoes</a>
+                            <a href="Wedding Shoes TRAVEL.html">Wedding Shoes</a>
+                            <a href="Casual Shoes TRAVEL.html">Casual Shoes</a>
+                        </div>
+                        <div class="category">
+                            <h3>Belts</h3>
+                            <a href="./Formal Belts TRAVEL.html">Formal Belts</a>
+                            <a href="./Casual Belts TRAVEL.html">Casual Belts</a>
+                        </div>
+                        <div class="category">
+                            <h3>Coats</h3>
+                            <a href="./Winter Coats TRAVEL.html">Winter Coats</a>
+                            <a href="./Leather Jackets TRAVEL.html">Leather Jackets</a>
+                        </div>
+                    </div>
+                
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="./Custom.html">Custom</a>
+                    <div class="dropdown-content">
+                        <div class="category">
+                            <h3>Celebrations</h3>
+                            <a href="./Personalized CUSTOM.html">Personalized</a>
+                            <a href="./Pride Day clothes CUSTOM.html">Pride Day Clothes</a>
+                        </div>
+                </li>
+                <li>
+                    <a href="./corporate.html">Corporate</a>
+                    
+                </li>
+                <li>
+                    <a href="./Sale.html">Sale</a>
+                    <div class="dropdown-content">
+                <li>
+                    <a href="./Gift.html">Gift</a>
+                </li>
+            </ul>
+        </nav>      
+        
+        
+        
+        <nav>
+            <div class="nav-bar">
+                <div class="search-container">
+                    <div class="search-icon" id="search-icon"></div>
+                    <input type="text" id="search-bar" placeholder="Search for products..." class="search-bar">
+                    <div id="search-results"></div>
+                </div>
+            </div>
+        </nav>
+        <script src="./Scripts/Search_FUNCTIO$NALITY.js"></script>
+        <script>
+            const searchIcon = document.getElementById('search-icon');
+            const searchBar = document.getElementById('search-bar');
+            const searchContainer = document.querySelector('.search-container');
+        
+            // Function to start the auto-expand animation
+            function startAutoExpand() {
+                searchContainer.classList.add('auto-expand');
+                searchBar.setAttribute('placeholder', 'Search for products...');
+            }
+        
+            // Function to stop the auto-expand animation
+            function stopAutoExpand() {
+                searchContainer.classList.remove('auto-expand');
+                searchBar.removeAttribute('placeholder');
+            }
+        
+            // Start the auto-expand animation when the page loads
+            window.addEventListener('load', () => {
+                startAutoExpand();
+            });
+        
+            // Stop the animation when the user interacts with the search bar
+            searchBar.addEventListener('focus', () => {
+                stopAutoExpand();
+            });
+        
+            // Restart the animation when the user stops interacting with the search bar
+            searchBar.addEventListener('blur', () => {
+                startAutoExpand();
+            });
+        
+            // Toggle the active state when the search icon is clicked
+            searchIcon.addEventListener('click', function () {
+                searchContainer.classList.toggle('active');
+                searchBar.focus(); // Focus on the search input
+            });
+        
+            // Handle input events for search functionality
+            searchBar.addEventListener('input', function () {
+                const query = searchBar.value.toLowerCase();
+                searchProducts(query);
+            });
+        
+            // Function to filter products based on the search query
+            function searchProducts(query) {
+                const allProducts = document.querySelectorAll('.product');
+                allProducts.forEach(product => {
+                    const productName = product.querySelector('.product-name').textContent.toLowerCase();
+                    if (productName.includes(query)) {
+                        product.style.display = 'block';
+                    } else {
+                        product.style.display = 'none';
+                    }
+                });
+            }
+        
+            // Shrink the search bar if clicked outside
+            document.addEventListener('click', function (event) {
+                if (!searchContainer.contains(event.target) && event.target !== searchIcon) {
+                    searchContainer.classList.remove('active');
+                }
+            });
+        </script>
+        <div class="nav-icons">
+        </div>
+        <div id="search-results"></div> 
+        <div class="nav-icons">
+            <a href="./AHA Systems/Code/Login and signup/Login.html">
+                <img src="./Images/Your Account.PNG" alt="Account"> Account
+            </a>
+            <a href="#">
+                <img src="./Images/Cart-Icon.png" alt="Cart"> Cart
+            </a>
+        </div>
+
+    </header>
+    <script>
+        const products = [
+            {
+                name: "Men's Leather Jacket",
+                description: "Classic leather jacket for men, perfect for any occasion.",
+                category: "Men",
+                price: "€199.99",
+                image: "./Images/Men_CUSTOM.jpg",
+                link: "./Men's Jacket PP.html"
+            },
+            {
+                name: "Men's Leather Wallet",
+                description: "Sleek and durable leather wallet with multiple card slots.",
+                category: "Men",
+                price: "€49.99",
+                image: "./Images/Men's Leather Wallet.PNG",
+                link: "product-details.html?id=2"
+            },
+            {
+                name: "Women's Leather Bag",
+                description: "Stylish leather handbag for everyday use.",
+                category: "Women",
+                price: "€129.99",
+                image: "./Images/MODEL FEMALE.PNG",
+                link: "product-details.html?id=3"
+            },
+            // Add more products here if you want!
+        ];
+    
+        const searchBar = document.getElementById('search-bar');
+        const searchResults = document.getElementById('search-results');
+    
+        searchBar.addEventListener('input', function () {
+            const query = searchBar.value.toLowerCase();
+            const filteredProducts = products.filter(product =>
+                product.name.toLowerCase().includes(query) ||
+                product.description.toLowerCase().includes(query) ||
+                product.category.toLowerCase().includes(query)
+            );
+    
+            displayResults(filteredProducts);
+        });
+    
+        function displayResults(filteredProducts) {
+            if (filteredProducts.length === 0) {
+                searchResults.innerHTML = "<div>No products found.</div>";
+                return;
+            }
+    
+            const resultsHTML = filteredProducts
+                .map(product => `
+                    <div class="product">
+                        <a href="${product.link}">
+                            <img src="${product.image}" alt="${product.name}">
+                            <h3>${product.name}</h3>
+                            <p>${product.description}</p>
+                            <p class="category">Category: ${product.category}</p>
+                            <p class="price">${product.price}</p>
+                        </a>
+                    </div>
+                `)
+                .join('');
+    
+            searchResults.innerHTML = resultsHTML;
+        }
+    </script>
+    <section class="filters">
+        <button class="toggle-filters">&#9776; Hide Filters</button>
+        
+        <div class="filter-category">
+            <h3>Some Products might not be available in certain locations.</h3>
+            <!-- Leather type options -->
+        </div>
+      
+    </section>
+    <section class="hero">
+        <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+            <iframe 
+                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
+                src="https://www.youtube.com/embed/HxOmInjuVYk?autoplay=1&loop=1&playlist=HxOmInjuVYk&mute=1" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen>
+            </iframe>
+        </div>
+        <div class="hero-overlay">
+            <a href="your-shop-link.html" target="_blank" class="shop-now-button">Shop Now</a>
+            <h1> </h1>
+        </div>
+    </section>
+          <!-- Horizontal Image Scroller -->
+           <h1>  </h1>
+           <h1>Trending Now</h1>
+          <section class="featured-products">
+            <div class="product-wrapper">
+                <div class="product-grid">
+                    <div class="product-item">
+                        <img src="./Images/Pets leather leash.PNG" alt="Leather Leash for Pets">
+                        <div class="product-info">
+                            <h3>Pet Leather Leash</h3>
+                            <p>Strong leather leash for safe and stylish walks.</p>
+                            <a href="#" class="product-btn">Buy Now</a>
+                        </div>
+                    </div>
+                    <div class="product-item">
+                        <img src="./Images/Men's Leather Wallet.PNG" alt="Leather Wallet for Men">
+                        <div class="product-info">
+                            <h3>Men's Leather Wallet</h3>
+                            <p>Sleek and durable leather wallet with multiple card slots.</p>
+                            <a href="#" class="product-btn">Buy Now</a>
+                        </div>
+                    </div>
+                    <div class="product-item">
+                        <img src="./Images/MODEL FEMALE.PNG" alt="Leather Tote">
+                        <div class="product-info">
+                            <h3>Elegant Leather Tote</h3>
+                            <p>Spacious, durable, and stylish—perfect for everyday elegance.</p>
+                            <a href="#" class="product-btn">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+            <body>
+              <div class="container">
+                <div class="line"></div> <!-- Line before the images -->
+                <div class="image-container">
+                  <h1>Dutch Craftsmen</h1>
+                  <img src="./Images/Translation/Netherlands (Dutch).png" alt="Image 1">
+                </div>
+                <div class="line"></div> <!-- Line after the images -->
+              </div>
+              <body>
+                <div class="container">
+                  <div class="line"></div> <!-- Line before the images -->
+                  <div class="image-container">
+                      <h1> Authentic Ethiopian Leather </h1>
+                    <img src="./Images/Ethiopian Flag.PNG" alt="Image 1">
+                  </div>
+                  <div class="line"></div> <!-- Line after the images -->
+                </div>
+        <!-- Horizontal Image Scroller -->
+        <section class="featured-products">
+            <div class="product-wrapper">
+                <h2></h2>
+                <div class="product-grid">
+                    <div class="product-item">
+                        <img src="./Images/LEATHER ETHIOPIA.jpg" alt="We import our leather from Ethiopia">
+                        <div class="product-info">
+                            <h3>Custom Designs?</h3>
+                            <p>Hand-stitched, premium quality with custom engraving options.</p>
+                            <a href="#" class="product-btn">Custom Design?</a>
+                        </div>
+                    </div>
+                    <div class="product-item">
+                        <img src="./Images/Men_CUSTOM.jpg" alt="Men's Leather Jacket">
+                        <div class="product-info">
+                            <h3>Luxury mens jacket</h3>
+                            <p>Luxury meets function in this handcrafted essential.</p>
+                            <a href="./Men's Jacket PP.html" class="product-btn">Buy Now</a>
+                        </div>
+                    </div>
+                    <div class="product-item">
+                        <img src="./Images/MAP.jpg" alt="Our Leather Source">
+                        <div class="Leather INFO">
+                            <h3>Authentic and High Quality Ethiopian Leather</h3>
+                            <p>Learn more about the sources of our leather products</p>
+                            <a href="#" class="product-btn">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const track = document.querySelector(".carousel-track");
+                const slides = document.querySelectorAll(".carousel-slide");
+                const prevBtn = document.querySelector(".prev-btn");
+                const nextBtn = document.querySelector(".next-btn");
+                const dotsContainer = document.querySelector(".carousel-dots");
+            
+                let index = 0;
+                const totalSlides = slides.length;
+                
+                // Create navigation dots
+                slides.forEach((_, i) => {
+                    const dot = document.createElement("span");
+                    dot.classList.add("dot");
+                    if (i === 0) dot.classList.add("active");
+                    dot.dataset.index = i;
+                    dotsContainer.appendChild(dot);
+                });
+            
+                const dots = document.querySelectorAll(".dot");
+            
+                function updateCarousel() {
+                    track.style.transform = `translateX(-${index * 100}%)`;
+                    dots.forEach(dot => dot.classList.remove("active"));
+                    dots[index].classList.add("active");
+                }
+            
+                function nextSlide() {
+                    index = (index + 1) % totalSlides;
+                    updateCarousel();
+                }
+            
+                function prevSlide() {
+                    index = (index - 1 + totalSlides) % totalSlides;
+                    updateCarousel();
+                }
+            
+                // Automatic Slide Every 4s
+                let autoSlide = setInterval(nextSlide, 4000);
+            
+                // Restart timer when user interacts
+                function resetTimer() {
+                    clearInterval(autoSlide);
+                    autoSlide = setInterval(nextSlide, 4000);
+                }
+            
+                // Event Listeners
+                nextBtn.addEventListener("click", () => {
+                    nextSlide();
+                    resetTimer();
+                });
+            
+                prevBtn.addEventListener("click", () => {
+                    prevSlide();
+                    resetTimer();
+                });
+            
+                dots.forEach(dot => {
+                    dot.addEventListener("click", (e) => {
+                        index = Number(e.target.dataset.index);
+                        updateCarousel();
+                        resetTimer();
+                    });
+                });
+            });
+            </script>
+    
+       
+    <style>
+        /* Basic reset */
+        body, h1, p {
+          margin: 0;
+          padding: 0;
+        }
+    
+        /* Container for the lines and images */
+        .container {
+          display: flex;
+          align-items: center; /* Vertically center the lines and images */
+          justify-content: center; /* Horizontally center the content */
+          gap: 20px; /* Space between lines and images */
+          padding: 20px;
+        }
+    
+        /* Styling for the horizontal lines */
+        .line {
+          flex-grow: 1; /* Lines take up remaining space */
+          height: 2px; /* Thickness of the line */
+          background-color: #000; /* Color of the line */
+        }
+    
+        /* Styling for the images */
+        .image-container {
+          display: flex;
+          gap: 10px; /* Space between images */
+        }
+    
+        .image-container img {
+          max-width: 100px; /* Adjust the width of the images */
+          height: auto; /* Maintain aspect ratio */
+          border-radius: 8px; /* Rounded corners */
+        }
+      </style>
+    </head>
+<footer>
+    <div class="footer-container">
+      <!-- Horizontal Columns -->
+      <div class="footer-grid">
+        <!-- Column 1: Customer Care -->
+        <div class="footer-section">
+          <h4>Customer Care</h4>
+          <ul>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Shipping</a></li>
+            <li><a href="#">Returns</a></li>
+            <li><a href="#">Track Order</a></li>
+            <li><a href="#">Press</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Catalog Unsubscribe</a></li>
+          </ul>
+        </div>
+        <!-- Column 2: About Us -->
+        <div class="footer-section">
+          <h4>About Us</h4>
+          <ul>
+            <li><a href="./About us.html">About AHA Leathers</a></li>
+            <li><a href="#">Our Leathers</a></li>
+            <li><a href="#">Leather Care</a></li>
+            <li><a href="#">Canvas Care</a></li>
+            <li><a href="#">Testimonials</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Affiliates</a></li>
+            <li><a href="#">Stories</a></li>
+          </ul>
+        </div>
+        <!-- Column 3: Services -->
+        <div class="footer-section">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#">Personalization</a></li>
+            <li><a href="#">Trapunto</a></li>
+            <li><a href="#">Deboss Monogramming</a></li>
+            <li><a href="#">Hand Paint</a></li>
+            <li><a href="#">Personalization FAQ</a></li>
+            <li><a href="#">Gift Cards</a></li>
+            <li><a href="#">Corporate Orders</a></li>
+            <li><a href="#">Events</a></li>
+          </ul>
+        </div>
+        <!-- Column 4: Connect With Us & Newsletter -->
+        <div class="footer-section">
+          <h4>Connect With Us!</h4>
+          <div class="social-icons">
+            <a href="./Images/Instagram_LOGO.png"><i class="."></i></a>
+            <a href="./Images/FaceBook_LOGO.png"><i class="fab fa-facebook"></i></a>
+            <a href=""><i class="fab fa-pinterest"></i></a>
+          </div>
+          <div class="newsletter">
+            <p class="newsletter-title">Take 10% off your first order $100+</p>
+            <p class="newsletter-sub">Sign up to receive exclusive offers, sneak peeks, a birthday surprise and more!</p>
+            <form>
+              <input type="text" placeholder="Birthday (mm/dd/yyyy)">
+              <div class="radio-group">
+                <label><input type="radio" name="gender" value="women"> Women</label>
+                <label><input type="radio" name="gender" value="men"> Men</label>
+              </div>
+              <input type="email" placeholder="Email address">
+              <button type="submit">Sign Up</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- Centered Logo & Branding -->
+      <div class="footer-logo">
+        <img src="your_logo.png" alt="AHA Leathers Logo">
+        <span>AHA Leathers</span>
+      </div>
+      <!-- Bottom Bar with Copyright & Links -->
+      <div class="footer-bottom">
+        <p>&copy; 2025 AHA Leathers. All rights reserved.</p>
+        <p class="footer-links">
+          <a href="./Privacy Policy.html">Privacy Policy</a> |
+          <a href="#">Terms &amp; Conditions</a> |
+          <a href="#">Site Map</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+    </body>
+    </html>
+    <body>
+        
