@@ -1,0 +1,210 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #0a0a0a;
+    color: #fff;
+  }
+  .background-slideshow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Place it behind the popup box */
+    overflow: hidden;
+  }
+  
+  #backgroundImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the entire background */
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+  }
+  
+  #backgroundImage.active {
+    opacity: 1;
+  }
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(10px);
+  }
+  
+  .popup-box {
+    background: linear-gradient(145deg, #1e1e1e, #2c2c2c);
+    padding: 15spx;
+    border-radius: 10px;
+    width: 450px;
+    max-width: 90%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #fff;
+    font-weight: 600;
+  }
+  
+  p {
+    font-size: 16px;
+    color: #bbb;
+    margin-bottom: 25px;
+  }
+  
+  .options {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .option {
+    flex: 1;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .option:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .option h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #fff;
+    font-weight: 500;
+  }
+  
+  .option p {
+    font-size: 14px;
+    color: #aaa;
+    margin-bottom: 15px;
+  }
+  
+  .option button {
+    background: linear-gradient(145deg, #007bff, #0056b3);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+  }
+  
+  .option button:hover {
+    background: linear-gradient(145deg, #0056b3, #007bff);
+    transform: scale(1.05);
+  }
+  
+  .country-list {
+    max-height: 250px;
+    overflow-y: auto;
+    margin-top: 15px;
+    display: none;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 10px;
+  }
+  
+  .country-list.show {
+    display: block;
+  }
+  
+  .country-item {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .country-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateX(5px);
+  }
+  
+  .country-item img {
+    width: 24px;
+    margin-right: 12px;
+    border-radius: 4px;
+  }
+  
+  .country-item span {
+    font-size: 16px;
+    color: #fff;
+  }
+  
+  .continue-button {
+    display: none;
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .continue-button button {
+    background: linear-gradient(145deg, #28a745, #1e7e34);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+  }
+  
+  .continue-button button:hover {
+    background: linear-gradient(145deg, #1e7e34, #28a745);
+    transform: scale(1.05);
+  }
+  
+  .login-text {
+    font-size: 14px;
+    color: #bbb;
+    margin-top: 20px;
+  }
+  
+  .login-text a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .login-text a:hover {
+    color: #0056b3;
+  }
+  

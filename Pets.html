@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AHA Leathers| Leather Goods</title>
+    <link rel="stylesheet" href="./styles_MEN.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;700&family=Poppins:wght@400;600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="./Images//Favicon.png">
+<body>
+    <header>
+        
+        <nav>
+            <!-- Navigation bar content -->
+        </nav>
+        
+        <div class="logo">
+            <img src="./Images/Logo.PNG" alt="AHA Leather Logo">
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li>
+                    <a href="./MEN.html">Men</a>
+                    <div class="dropdown-content">
+                        <div class="category">
+                            <h3>Shoes</h3>
+                            <a href="./Hiking Shoes MEN.html">Hiking Shoes</a>
+                            <a href="./Wedding Shoes MEN.html">Wedding Shoes</a>
+                            <a href="./Casual Shoes MEN.html">Casual Shoes</a>
+                        </div>
+                        <div class="category">
+                            <h3>Belts</h3>
+                            <a href="./Formal Belts MEN.html">Formal Belts</a>
+                            <a href="./Casual Belts MEN.html">Casual Belts</a>
+                        </div>
+                        <div class="category">
+                            <h3>Coats</h3>
+                            <a href="./Winter Coats MEN.html">Winter Coats</a>
+                            <a href="./Leather Jackets MEN.html">Leather Jackets</a>
+                            
+                        </div>
+                    </div>
+                    </li>
+                    
+                <li>
+                    <a href="./Women.html">Women</a>
+                    <div class="dropdown-content">
+                        <div class="category">
+                            <h3>Handbags</h3>
+                            <a href="./Totes WOMEN.html">Totes</a>
+                            <a href="./Clutches WOMEN.html">Clutches</a>
+                        </div>
+                        <div class="category">
+                            <h3>Jackets</h3>
+                            <a href="./Half-Jack WOMEN.html">Half-sized Jackets</a>
+                            <a href="./Full-Jack WOMEN.html">Full Winter Jackets</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="./Pets.html">Pets</a>
+                    <div class="dropdown-content">
+                        <div class="category">
+                            <h3>Collars</h3>
+                            <a href="./Leather Collars PETS.html">Leather Collars</a>
+                            <a href="./Custom Collars.html">Custom Collars</a>
+                        </div>
+                        <div class="category">
+                            <h3>Leashes</h3>
+                            <a href="./Rope Leashes PETS.html">Rope Leashes</a>
+                            <a href="./Chain Leashes PETS.html">Chain Leashes</a>
+                        </div>
+                    </div>
+                </li>
+                <li> <a href="./Travel.html">Travel</a>
+                    <div class="dropdown-content">
+                        <div class="category">
+                            <h3>Shoes</h3>
+                            <a href="Hiking Shoes TRAVEL.html">Hiking Shoes</a>
+                            <a href="Wedding Shoes TRAVEL.html">Wedding Shoes</a>
+                            <a href="Casual Shoes TRAVEL.html">Casual Shoes</a>
+                        </div>
+                        <div class="category">
+                            <h3>Belts</h3>
+                            <a href="./Formal Belts TRAVEL.html">Formal Belts</a>
+                            <a href="./Casual Belts TRAVEL.html">Casual Belts</a>
+                        </div>
+                        <div class="category">
+                            <h3>Coats</h3>
+                            <a href="./Winter Coats TRAVEL.html">Winter Coats</a>
+                            <a href="./Leather Jackets TRAVEL.html">Leather Jackets</a>
+                        </div>
+                    </div>
+                
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="./Custom.html">Custom</a>
+                    <div class="dropdown-content">
+                        <div class="category">
+                            <h3>Celebrations</h3>
+                            <a href="./Personalized CUSTOM.html">Personalized</a>
+                            <a href="./Pride Day clothes CUSTOM.html">Pride Day Clothes</a>
+                        </div>
+                </li>
+                <li>
+                    <a href="./corporate.html">Corporate</a>
+                    
+                </li>
+                <li>
+                    <a href="./Sale.html">Sale</a>
+                    <div class="dropdown-content">
+                <li>
+                    <a href="./Gift.html">Gift</a>
+                </li>
+            </ul>
+        </nav>      
+        
+        
+        <nav>
+            <div class="nav-bar">
+                <div class="search-container">
+                    <div class="search-icon" id="search-icon"></div>
+                    <input type="text" id="search-bar" placeholder="Search for products..." class="search-bar">
+                </div>
+            </div>
+        </nav>
+        <script src="./Scripts/Search_FUNCTIO$NALITY.js"></script>
+<script>
+    const searchIcon = document.getElementById('search-icon');
+const searchBar = document.getElementById('search-bar');
+const searchContainer = document.querySelector('.search-container');
+
+// Toggle the active state when the search icon is clicked
+searchIcon.addEventListener('click', function() {
+    searchContainer.classList.toggle('active');
+    searchBar.focus(); // Focus on the search input
+});
+
+// Handle input events for search functionality
+searchBar.addEventListener('input', function() {
+    const query = searchBar.value.toLowerCase();
+    searchProducts(query);
+});
+
+// Function to filter products based on the search query
+function searchProducts(query) {
+    const allProducts = document.querySelectorAll('.product');
+    allProducts.forEach(product => {
+        const productName = product.querySelector('.product-name').textContent.toLowerCase();
+        if (productName.includes(query)) {
+            product.style.display = 'block';
+        } else {
+            product.style.display = 'none';
+        }
+    });
+}
+
+// Shrink the search bar if clicked outside
+document.addEventListener('click', function(event) {
+    // Check if the clicked target is not the search bar or icon
+    if (!searchContainer.contains(event.target) && event.target !== searchIcon) {
+        searchContainer.classList.remove('active');
+    }
+});
+
+
+</script>  
+        <div class="nav-icons">
+        </div>
+        <div id="search-results"></div> 
+        <div class="nav-icons">
+            <a href="./AHA Systems/Code/Login and signup/Login.html">
+                <img src="./Images/Your Account.PNG" alt="Account"> Account
+            </a>
+            <a href="#">
+                <img src="./Images/Cart-Icon.png" alt="Cart"> Cart
+            </a>
+        </div>
+
+    </header>
+    <section class="filters">
+        <button class="toggle-filters">&#9776; Hide Filters</button>
+        
+        <div class="filter-category">
+            <h3>Some Products might not be available in certain locations.</h3>
+            <!-- Leather type options -->
+        </div>
+      
+    </section>
+    <nav>
+        <h1>Pets</h1>
+        <a href="./Index1.html">Home</a> / <a href="Pets.html">Pets</a> / <strong>View All</strong>
+    </nav>
+        
+        
+            <!-- More products here -->
+        </div>
+    </section>
+    
+    <script src="script.js"></script>
+    <footer>
+        <div class="footer-container">
+          <!-- Horizontal Columns -->
+          <div class="footer-grid">
+            <!-- Column 1: Customer Care -->
+            <div class="footer-section">
+              <h4>Customer Care</h4>
+              <ul>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Shipping</a></li>
+                <li><a href="#">Returns</a></li>
+                <li><a href="#">Track Order</a></li>
+                <li><a href="#">Press</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Catalog Unsubscribe</a></li>
+              </ul>
+            </div>
+            <!-- Column 2: About Us -->
+            <div class="footer-section">
+              <h4>About Us</h4>
+              <ul>
+                <li><a href="./About us.html">About AHA Leathers</a></li>
+                <li><a href="#">Our Leathers</a></li>
+                <li><a href="#">Leather Care</a></li>
+                <li><a href="#">Canvas Care</a></li>
+                <li><a href="#">Testimonials</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Affiliates</a></li>
+                <li><a href="#">Stories</a></li>
+              </ul>
+            </div>
+            <!-- Column 3: Services -->
+            <div class="footer-section">
+              <h4>Services</h4>
+              <ul>
+                <li><a href="#">Personalization</a></li>
+                <li><a href="#">Trapunto</a></li>
+                <li><a href="#">Deboss Monogramming</a></li>
+                <li><a href="#">Hand Paint</a></li>
+                <li><a href="#">Personalization FAQ</a></li>
+                <li><a href="#">Gift Cards</a></li>
+                <li><a href="#">Corporate Orders</a></li>
+                <li><a href="#">Events</a></li>
+              </ul>
+            </div>
+            <!-- Column 4: Connect With Us & Newsletter -->
+            <div class="footer-section">
+              <h4>Connect With Us!</h4>
+              <div class="social-icons">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-pinterest"></i></a>
+              </div>
+              <div class="newsletter">
+                <p class="newsletter-title">Take 10% off your first order $100+</p>
+                <p class="newsletter-sub">Sign up to receive exclusive offers, sneak peeks, a birthday surprise and more!</p>
+                <form>
+                  <input type="text" placeholder="Birthday (mm/dd/yyyy)">
+                  <div class="radio-group">
+                    <label><input type="radio" name="gender" value="women"> Women</label>
+                    <label><input type="radio" name="gender" value="men"> Men</label>
+                  </div>
+                  <input type="email" placeholder="Email address">
+                  <button type="submit">Sign Up</button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <!-- Centered Logo & Branding -->
+          <div class="footer-logo">
+            <img src="your_logo.png" alt="AHA Leathers Logo">
+            <span>AHA Leathers</span>
+          </div>
+          <!-- Bottom Bar with Copyright & Links -->
+          <div class="footer-bottom">
+            <p>&copy; 2025 AHA Leathers. All rights reserved.</p>
+            <p class="footer-links">
+              <a href="./Privacy Policy.html">Privacy Policy</a> |
+              <a href="#">Terms &amp; Conditions</a> |
+              <a href="#">Site Map</a>
+            </p>
+          </div>
+        </div>
+      </footer>
+        </body>
+        </html>
+        <body>
+            
